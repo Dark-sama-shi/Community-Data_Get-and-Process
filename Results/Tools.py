@@ -1,9 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Fri Mar 18 10:47:10 2022
-
-@author: apple
-"""
 import numpy as np
 import pandas as pd
 import math

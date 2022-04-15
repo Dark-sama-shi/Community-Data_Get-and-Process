@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+
 import numpy as np
 import pandas as pd
 import math
@@ -18,3 +19,14 @@ def itude_to_distance(long1,lati1,long2,lati2):
     x=abs(lati1-lati2)*111
     y=abs(long1-long2)*math.cos((lati1+lati2)*math.pi/360)*111
     return round((x**2+y**2)**0.5)
+
+#矩阵转置，输入矩阵输出转置的矩阵
+def matrix_convert(tup):
+    n,m=len(tup),len(tup[0])
+    return tuple(tuple(tup[i][j] for i in range(n)) for j in range(m))
+
+#标准化，输入一组数据，输出标准化后的数据
+def z_score(tup):
+    tup=np.array(tup)
+    tup=(tup-tup.mean())/tup.std()
+    return tuple(tup)
